@@ -25,3 +25,28 @@ Manage R analytics project.
 ├── sample.Rproj  
 └── sandbox  
 </pre>
+
+## Command
+
+* Create Project
+Create project directory & Rproj file.
+
+```
+pipelineR::create_proj('project_name')
+```
+ 
+* Create processer
+Create processer R script.  
+This script contains base code.
+
+```
+pipelineR::create_processer('processer_name')
+```
+ 
+* Create model
+Create model R script.  
+This script contains base code.  
+
+```
+pipelineR::create_model('model_name','processer_name')
+```
