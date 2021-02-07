@@ -3,6 +3,8 @@ Manage R analytics project.
 
 ## Directory  
 
+<pre>
+.
 ├── README.md  
 ├── config  
 ├── data  
@@ -22,3 +24,4 @@ Manage R analytics project.
 │       └── processer01.R  
 ├── sample.Rproj  
 └── sandbox  
+</pre>
