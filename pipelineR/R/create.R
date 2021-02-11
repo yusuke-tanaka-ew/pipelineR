@@ -1,6 +1,7 @@
 #' Create project/processer/model (/experiment)
 #'
 #' Create project & manage experiment. 
+#' @import usethis
 #' @param project_name Target project name. 
 #' @param processer_name Target processer name.
 #' @param model_name Target model name.
@@ -8,10 +9,26 @@
 #' @examples
 
 create_proj <- function(project_name){
-    # TODO Create Dir
-    dir.Create()
-    # TODO Create R project
-
+    # Create root dir
+    dir.create(project_name)
+    # Set working dir
+    setwd(project_name)
+    # Create sub dir
+    dir.create('data')
+    dir.create('data/raw')
+    dir.create('data/input')
+    dir.create('data/output')
+    dir.create('data/report')
+    dir.create('experiment')
+    dir.create('experiment/processer')
+    dir.create('experiment/models')
+    dir.create('config')
+    dir.create('sandbox')
+    #  Create R project
+    usethis::use_rstudio()
+    # Create README & expr.yaml
+    file.create('README.md')
+    file.create('experiment/expr.yaml')
 }
 
 create_processer <- function(processer_name){
