@@ -60,7 +60,7 @@ This is for develop version. After ver 0.0.5 , you can use prd ver.
 Select branch.  
 
 ```
-git clone yusuke-tanaka-ew/pipelineR -b ver1.0.0
+git clone yusuke-tanaka-ew/pipelineR -b ver0.0.0
 ```
 
 2. Install package from source file
