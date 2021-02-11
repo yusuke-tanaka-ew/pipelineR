@@ -28,14 +28,14 @@ Manage R analytics project.
 
 ## Command
 
-* Create Project
+* Create Project  
 Create project directory & Rproj file.
 
 ```
 pipelineR::create_proj('project_name')
 ```
  
-* Create processer
+* Create processer  
 Create processer R script.  
 This script contains base code.
 
@@ -43,7 +43,7 @@ This script contains base code.
 pipelineR::create_processer('processer_name')
 ```
  
-* Create model
+* Create model  
 Create model R script.  
 This script contains base code.  
 

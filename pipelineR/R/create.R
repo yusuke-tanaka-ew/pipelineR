@@ -8,7 +8,10 @@
 #' @examples
 
 create_proj <- function(project_name){
-    # TODO Create Rproj/dir
+    # TODO Create Dir
+    dir.Create()
+    # TODO Create R project
+
 }
 
 create_processer <- function(processer_name){
