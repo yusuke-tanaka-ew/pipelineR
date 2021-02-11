@@ -25,7 +25,10 @@ create_proj <- function(project_name){
     dir.create('config')
     dir.create('sandbox')
     #  Create R project
+    usethis::create_project('.')
     usethis::use_rstudio()
+    # Remove R dir
+    file.remove('R')
     # Create README & expr.yaml
     file.create('README.md')
     file.create('experiment/expr.yaml')
