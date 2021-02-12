@@ -1,7 +1,7 @@
 #' Controll output data (Save)
 #'
 #' Controll output data. Save & Load output data by model name.
-#' @param model_name Target processer name.
+#' @param model_name Target model name.
 #' @export 
 #' @examples
 
