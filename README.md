@@ -8,18 +8,20 @@ Manage R analytics project.
 ├── README.md  
 ├── config  
 ├── data  
-│   ├── garbage  
 │   ├── input  
 │   │   └── input_processer01.csv  
 │   ├── output  
 │   │   └── output_model01.csv  
 │   ├── raw  
 │   │   └── rawdata.csv  
-│   └── report  
+│   ├── report  
+│   └── garbage  
 ├── experiment  
 │   ├── expr.yaml  
+│   ├── proc.yaml  
+│   ├── mod.yaml  
 │   ├── models  
-│   │   └── model01.R  
+│   │   └── model01_01.R  
 │   └── processer  
 │       └── processer01.R  
 ├── sample.Rproj  
@@ -32,7 +34,7 @@ Manage R analytics project.
 Create project directory & Rproj file.
 
 ```
-pipelineR::create_proj('project_name')
+pipelineR::project_create('project_name')
 ```
  
 * Create processer  
@@ -40,7 +42,7 @@ Create processer R script.
 This script contains base code.
 
 ```
-pipelineR::create_processer('processer_name')
+pipelineR::processer_create('processer_name')
 ```
  
 * Create model  
@@ -48,7 +50,7 @@ Create model R script.
 This script contains base code.  
 
 ```
-pipelineR::create_model('model_name','processer_name')
+pipelineR::model_create('model_name','processer_name')
 ```
 
 ## How to install?

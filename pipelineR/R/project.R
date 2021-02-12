@@ -1,14 +1,12 @@
-#' Create project/processer/model (/experiment)
+#' Create project
 #'
-#' Create project & manage experiment. 
+#' Create function (create directory & add files.) 
 #' @import usethis
 #' @param project_name Target project name. 
-#' @param processer_name Target processer name.
-#' @param model_name Target model name.
 #' @export 
 #' @examples
 
-create_proj <- function(project_name){
+project_create <- function(project_name){
     # Create root dir
     dir.create(project_name)
     # Set working dir
@@ -32,12 +30,8 @@ create_proj <- function(project_name){
     # Create README & expr.yaml
     file.create('README.md')
     file.create('experiment/expr.yaml')
-}
-
-create_processer <- function(processer_name){
-    # TODO Create processer script
-}
-
-create_model <- function(model_name,processer_name){
-    # TODO Create model script
+    file.create('experiment/proc.yaml')
+    file.create('experiment/mod.yaml')
+    # Print creating project info.
+    print(paste('Succeed to create project : ',project_name,sep=""))
 }
