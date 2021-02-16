@@ -5,9 +5,11 @@
 #' @param processer_name Target processer name.
 #' @export 
 #' @examples
+#' @include template.R
 
-# read template string
-source('template.R')
+# meta data location
+meta_dir <- 'TODO NOW LOADING'
+
 
 processer_create <- function(processer_name){
     # TODO Check Rscript & Create processer script
@@ -21,4 +23,9 @@ processer_create <- function(processer_name){
     }
     # TODO add processer info to processer.yaml
 
+}
+
+
+proc_yaml_read <- function(processer_name){
+    ## TODO read processer info from proc.yaml
 }

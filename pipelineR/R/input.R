@@ -7,7 +7,7 @@
 
 input_write <- function(processer_name){
     ## TODO: Save input data @data/input/. File name is defined by processer_name.
-
+    
 }
 
 input_read <- function(processer_name){
