@@ -1,4 +1,0 @@
-## TODO set model template
-## params
-## - model_name : model name
-## - processer_name : processer name

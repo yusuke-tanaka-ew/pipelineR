@@ -5,10 +5,6 @@
 #' @param processer_name Target processer name.
 #' @export 
 #' @examples
-#' @include template.R
-
-# meta data location
-meta_dir <- 'TODO NOW LOADING'
 
 
 processer_create <- function(processer_name){
@@ -18,7 +14,7 @@ processer_create <- function(processer_name){
     }else{
         # Create processer R script.
         ## Load Template & insert processer_name
-        write(template_proc_get(processer_name),paste(processer_name,'.R',sep=""))
+        write(template_proc_get(processer_name),paste('experiment/processer/',processer_name,'.R',sep=""))
         print(paste(processer_name,'.R is created.',sep=""))
     }
     # TODO add processer info to processer.yaml
