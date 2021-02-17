@@ -5,13 +5,13 @@
 #' @export 
 #' @examples
 
-input_write <- function(processer_name){
-    ## TODO: Save input data @data/input/. File name is defined by processer_name.
+input_write <- function(x,processer_name){
+    ## TODO: Save input data @data/input/. File name is defined by proc meta file.
     
 }
 
 input_read <- function(processer_name){
-    ## TODO: Load input data by processer name. Mainly called at model
+    ## TODO: Load input data by processer name. Mainly called at model. input file name is defined at proc meta file.
 
 }
 

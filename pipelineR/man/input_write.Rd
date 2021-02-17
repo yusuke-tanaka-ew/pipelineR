@@ -4,7 +4,7 @@
 \alias{input_write}
 \title{Controll input data (Save & load)}
 \usage{
-input_write(processer_name)
+input_write(x, processer_name)
 }
 \arguments{
 \item{processer_name}{Target processer name.}

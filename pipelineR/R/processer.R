@@ -2,13 +2,14 @@
 #'
 #' Create processer (Add processer script & model info to proc.yaml)
 #' @import usethis
+#' @import rlist
 #' @param processer_name Target processer name.
 #' @export 
 #' @examples
 
 
 processer_create <- function(processer_name){
-    # TODO Check Rscript & Create processer script
+    # Check Rscript & Create processer script
     if(paste(processer_name,'.R',sep="") %in% list.files('experiment/processer')){
         print(paste(processer_name,' already exists.',sep=""))
     }else{
@@ -17,11 +18,42 @@ processer_create <- function(processer_name){
         write(template_proc_get(processer_name),paste('experiment/processer/',processer_name,'.R',sep=""))
         print(paste(processer_name,'.R is created.',sep=""))
     }
-    # TODO add processer info to processer.yaml
-
+    # Add processer info to processer.yaml
+    if(meta_proc_add(processer_name)){
+        print('Creating processer Succeed!')
+    }
 }
 
 
-proc_yaml_read <- function(processer_name){
-    ## TODO read processer info from proc.yaml
+
+meta_proc_add <- function(processer_name){
+    # TODO add meta data of new processer
+    if(is.null(meta_proc_read(processer_name))){
+        # Add new proc
+        ## Create proc data
+        input_default <- paste('input_',processer_name,'.csv',sep='')
+        proc_tgt <- list(name=processer_name,description='Please write description here!',input=input_default)
+        proc_all <- append(meta_proc_read(),list(proc_tgt))
+        list.save(proc_all,'./experiment/proc.yaml')
+        print('Processer meta data is added to experiment/proc.yaml. Please Add description!')
+        return(TRUE)
+    }else{
+        # There is already proc meta data.
+        print('There is proc meta data(proc.yaml) that has same name')
+        return(FALSE)
+    }
+    
 }
+
+
+meta_proc_read <- function(processer_name = NULL){
+    # Read meta data of processer & return meta data as list(if there is no data -> retutn NULL,if processer_name is null then return all metadata)
+    proc_all <- list.load('./experiment/proc.yaml')
+    if(is.null(processer_name)){
+        return(proc_all)
+    }else{
+        proc_tgt <- list.first(list.filter(proc_all,name=processer_name))
+        return(proc_tgt)
+    }
+}
+
