@@ -1,3 +1,0 @@
-## TODO set processer template
-## params
-## - processer_name : processer name
