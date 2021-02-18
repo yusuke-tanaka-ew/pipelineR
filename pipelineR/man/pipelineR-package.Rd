@@ -4,9 +4,9 @@
 \name{pipelineR-package}
 \alias{pipelineR}
 \alias{pipelineR-package}
-\title{pipelineR: What the Package Does (One Line, Title Case)}
+\title{pipelineR: Manage Your Project.}
 \description{
-What the package does (one paragraph).
+Manage experiment with processer & model.
 }
 \author{
 \strong{Maintainer}: Yusuke Tanaka \email{yusuke.tanaka.keio@gmail.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})

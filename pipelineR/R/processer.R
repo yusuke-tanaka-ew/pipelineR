@@ -45,14 +45,21 @@ meta_proc_add <- function(processer_name){
     
 }
 
-
+#' Read proc meta data.
+#'
+#' Read proc meta data. When processer_name is null ,return all proc meta data. With processer name return list of proc meta data,you can use {name,description,input}
+#' @import usethis
+#' @import rlist
+#' @param processer_name Target processer name.
+#' @export 
+#' @examples
 meta_proc_read <- function(processer_name = NULL){
     # Read meta data of processer & return meta data as list(if there is no data -> retutn NULL,if processer_name is null then return all metadata)
     proc_all <- list.load('./experiment/proc.yaml')
     if(is.null(processer_name)){
         return(proc_all)
     }else{
-        proc_tgt <- list.first(list.filter(proc_all,name=processer_name))
+        proc_tgt <- list.first(list.filter(proc_all,name==processer_name))
         return(proc_tgt)
     }
 }
