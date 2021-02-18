@@ -2,6 +2,7 @@
 
 export(input_read)
 export(input_write)
+export(meta_proc_add)
 export(meta_proc_read)
 export(model_create)
 export(output_write)
