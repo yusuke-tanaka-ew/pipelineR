@@ -1,5 +1,5 @@
 Package: pipelineR
-Title: What the Package Does (One Line, Title Case)
+Title: Manage Your Project.
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Yusuke",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "yusuke.tanaka.keio@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Manage experiment with processer & model.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

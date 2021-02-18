@@ -2,7 +2,7 @@
 % Please edit documentation in R/input.R
 \name{input_write}
 \alias{input_write}
-\title{Controll input data (Save & load)}
+\title{Controll input data : Save}
 \usage{
 input_write(x, processer_name)
 }
@@ -10,5 +10,5 @@ input_write(x, processer_name)
 \item{processer_name}{Target processer name.}
 }
 \description{
-Controll input data. Save & Load input data by processer name
+Controll input data. Save input data by processer name: file type is only csv.
 }

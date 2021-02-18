@@ -1,13 +1,3 @@
-#' Controll template
-#'
-#' Controlle template of {processer/model}
-#' @param processer_name Target processer name.
-#' @param model_name Target model name.
-#' @export 
-#' @examples
-
-## TODO CHECK! Can I read package dir or file. If cannnot read tex file
-
 template_proc_get <- function(processer_name){
     # read processer template & insert processer name
     template_proc <- "## This is processer tampate.
