@@ -24,7 +24,14 @@ processer_create <- function(processer_name){
     }
 }
 
-
+#' Add proc meta data.
+#'
+#' Add proc meta data to proc.yaml  . If success to add, return TRUE, else FALSE.
+#' @import usethis
+#' @import rlist
+#' @param processer_name Target processer name.
+#' @export 
+#' @examples
 
 meta_proc_add <- function(processer_name){
     # TODO add meta data of new processer
