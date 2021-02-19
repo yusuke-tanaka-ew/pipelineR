@@ -10,5 +10,5 @@ meta_proc_add(processer_name)
 \item{processer_name}{Target processer name.}
 }
 \description{
-Add proc meta data to proc.yaml  . If success to add, return TRUE, else FALSE.
+Add proc meta data to proc.yaml   . If success to add, return TRUE, else FALSE.
 }

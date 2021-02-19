@@ -2,14 +2,26 @@
 #'
 #' Create model (add R srcipt & model info to mod.yaml)
 #' @import usethis
+#' @import rlist
 #' @param processer_name Target processer name.
 #' @param model_name Target model name.
 #' @export 
 #' @examples
 
 model_create <- function(model_name,processer_name){
-    # TODO Create model script
+    # Check there is already model script
+    if(paste(model_name,'.R',sep='') %in% list.files('experiment/models')){
+        print('There is already model that has same name.')
+    }else{
+        write(template_mod_get(model_name,processer_name),paste('experiment/models/',model_name,'.R',sep=''))
+        print(paste(model_name,'.R is created.',se=''))
+    }
+    # Add meta data to mod 
+    if(meta_mod_add(model_name,processer_name)){
+        print('Creating model successed!')
+    }
 }
+
 
 
 #' Add meta data of model
@@ -22,8 +34,8 @@ model_create <- function(model_name,processer_name){
 #' @examples
 
 meta_mod_add <- function(model_name,processer_name){
-    ## TODO check mod.yaml & Add meta data to mod.yaml
-
+    ## TODO check mod.yaml & Add meta data to mod.yaml . Return TURE or FALSE
+    return(TRUE)
 }
 
 
@@ -39,6 +51,7 @@ meta_mod_add <- function(model_name,processer_name){
 meta_mod_read <- function(model_name=NULL){
     # TODO if model_name is null -> return all model meta data, if model_name is not null -> return meta data of model_name.
 }
+
 
 #' Add meta data of model's output.
 #'
