@@ -16,8 +16,18 @@ pipelineR::input_write(input_df,'#processer_name#')
 
 template_mod_get <- function(model_name,processer_name){
     # read model template & insert model name
-    template_mod <- 'THIS IS TEMPLATE TEXT. model name is : model_name ,proc name is : processer_name !!!'
-    template_mod <- gsub('model_name',model_name,template_mod)
-    template_mod <- gsub('processer_name',processer_name,template_mod)
+    template_mod <- '
+## This is model template.
+## model name is #model_name#\n
+# Section0. package
+library(pipelineR)\n
+# Section1. Read input data
+df_input <- pipelineR::input_read(#proceser_name#)\n
+# Section2. model \n\n
+# Section3. Save TODO rewrite save function
+pipelineR::output_write(output,#model_name#)
+'
+    template_mod <- gsub('#model_name#',model_name,template_mod)
+    template_mod <- gsub('#processer_name#',processer_name,template_mod)
     return(template_mod)
 }
