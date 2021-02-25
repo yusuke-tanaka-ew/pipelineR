@@ -4,12 +4,12 @@
 \alias{meta_mod_output_add}
 \title{Add meta data of model's output.}
 \usage{
-meta_mod_output_add(model_name, output_name)
+meta_mod_output_add(model_name, output_file_name)
 }
 \arguments{
 \item{model_name}{Target model name.}
 
-\item{output_name}{Target output name.}
+\item{output_file_name}{Target output name.}
 }
 \description{
 Add meta data of model's output to mod.yaml. If there is meta data of input model, or output, function does nothing.
