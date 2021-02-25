@@ -25,7 +25,7 @@ library(pipelineR)\n
 df_input <- pipelineR::input_read(#proceser_name#)\n
 # Section2. model \n\n
 # Section3. Save TODO rewrite save function
-pipelineR::output_write(output,write.csv(),#model_name#)
+pipelineR::output_write(output,#model_name#)
 '
     template_mod <- gsub('#model_name#',model_name,template_mod)
     template_mod <- gsub('#processer_name#',processer_name,template_mod)
