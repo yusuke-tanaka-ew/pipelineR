@@ -4,14 +4,14 @@
 \alias{output_write}
 \title{Controll output data (Write)}
 \usage{
-output_write(x, write_func, model_name)
+output_write(x, model_name)
 }
 \arguments{
 \item{x}{Target output data.}
 
-\item{write_func}{How to save x. e.g) write.csv()}
-
 \item{model_name}{Target model name.}
+
+\item{write_func}{How to save x. e.g) write.csv()}
 }
 \description{
 Controll output data. Write output data by output_data name & model name
