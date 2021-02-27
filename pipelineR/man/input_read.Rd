@@ -12,3 +12,6 @@ input_read(processer_name)
 \description{
 Controll input data. Read input data by processer name: file type is only csv.
 }
+\examples{
+input_read('proc_sample')
+}

@@ -12,3 +12,6 @@ meta_proc_add(processer_name)
 \description{
 Add proc meta data to proc.yaml   . If success to add, return TRUE, else FALSE.
 }
+\examples{
+meta_proc_add('proc_sample')
+}

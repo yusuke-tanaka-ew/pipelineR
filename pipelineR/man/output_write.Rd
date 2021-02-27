@@ -16,3 +16,6 @@ output_write(x, model_name)
 \description{
 Controll output data. Write output data by output_data name & model name
 }
+\examples{
+output_write(df_output,'mod_sapmple')
+}

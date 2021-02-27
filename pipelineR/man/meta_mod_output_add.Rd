@@ -14,3 +14,6 @@ meta_mod_output_add(model_name, output_file_name)
 \description{
 Add meta data of model's output to mod.yaml. If there is meta data of input model, or output, function does nothing.
 }
+\examples{
+meta_mod_output_add('mod_sample','output_file_name.csv')
+}

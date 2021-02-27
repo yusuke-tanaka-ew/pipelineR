@@ -5,7 +5,7 @@
 #' @import rlist
 #' @param processer_name Target processer name.
 #' @export 
-#' @examples
+#' @examples processer_crate('proc_sample')
 
 
 processer_create <- function(processer_name){
@@ -31,7 +31,7 @@ processer_create <- function(processer_name){
 #' @import rlist
 #' @param processer_name Target processer name.
 #' @export 
-#' @examples
+#' @examples meta_proc_add('proc_sample')
 
 meta_proc_add <- function(processer_name){
     # TODO add meta data of new processer
@@ -59,7 +59,8 @@ meta_proc_add <- function(processer_name){
 #' @import rlist
 #' @param processer_name Target processer name.
 #' @export 
-#' @examples
+#' @examples meta_proc_read('proc_sample')
+
 meta_proc_read <- function(processer_name = NULL){
     # Read meta data of processer & return meta data as list(if there is no data -> retutn NULL,if processer_name is null then return all metadata)
     proc_all <- list.load('./experiment/proc.yaml')

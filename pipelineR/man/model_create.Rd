@@ -14,3 +14,6 @@ model_create(model_name, processer_name)
 \description{
 Create model (add R srcipt & model info to mod.yaml)
 }
+\examples{
+model_create('mod_sample','proc_sample')
+}

@@ -12,3 +12,6 @@ meta_mod_output_read(model_name)
 \description{
 Read meta data of model's output to mod.yaml. If there is meta data of input model name or output, return NULL
 }
+\examples{
+meta_mod_output_read('mod_sample')
+}

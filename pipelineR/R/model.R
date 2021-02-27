@@ -6,7 +6,7 @@
 #' @param processer_name Target processer name.
 #' @param model_name Target model name.
 #' @export 
-#' @examples
+#' @examples model_create('mod_sample','proc_sample')
 
 model_create <- function(model_name,processer_name){
     # Check there is already model script
@@ -32,7 +32,7 @@ model_create <- function(model_name,processer_name){
 #' @param processer_name Target processer name.
 #' @param model_name Target model name.
 #' @export 
-#' @examples
+#' @examples meta_mod_add('mod_sample','proc_sample')
 
 meta_mod_add <- function(model_name,processer_name){
     if(is.null(meta_mod_read(model_name))){
@@ -56,7 +56,7 @@ meta_mod_add <- function(model_name,processer_name){
 #' @param processer_name Target processer name.
 #' @param model_name Target model name.
 #' @export 
-#' @examples
+#' @examples meta_mod_read('mod_sample')
 meta_mod_read <- function(model_name=NULL){
     # if model_name is null -> return all model meta data, if model_name is not null -> return meta data of model_name.
     mod_all <- list.load('./experiment/mod.yaml')
@@ -76,7 +76,7 @@ meta_mod_read <- function(model_name=NULL){
 #' @param model_name Target model name.
 #' @param output_file_name Target output name.
 #' @export 
-#' @examples
+#' @examples meta_mod_output_add('mod_sample','output_file_name.csv')
 
 meta_mod_output_add <- function(model_name,output_file_name){
     ## TODO check mod.yaml & Add meta data to mod.yaml
@@ -114,7 +114,7 @@ meta_mod_output_add_execution <- function(model_name,output_file_name){
 #' @import usethis
 #' @param model_name Target model name.
 #' @export 
-#' @examples
+#' @examples meta_mod_output_read('mod_sample')
 
 meta_mod_output_read <- function(model_name){
     mod_tgt <- meta_mod_read(model_name)

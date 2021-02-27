@@ -14,3 +14,6 @@ meta_mod_read(model_name = NULL)
 \description{
 Read meta data of model to mod.yaml. If model_name is NULL (default is NULL), return all model meta data as list.
 }
+\examples{
+meta_mod_read('mod_sample')
+}

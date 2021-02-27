@@ -3,7 +3,7 @@
 #' Controll input data. Save input data by processer name: file type is only csv.
 #' @param processer_name Target processer name.
 #' @export 
-#' @examples
+#' @examples input_write(df_input,'proc_sample')
 
 input_write <- function(x,processer_name){
     ## Save input data @data/input/. File name is defined by proc meta file.
@@ -25,7 +25,7 @@ input_write <- function(x,processer_name){
 #' Controll input data. Read input data by processer name: file type is only csv.
 #' @param processer_name Target processer name.
 #' @export 
-#' @examples
+#' @examples input_read('proc_sample')
 input_read <- function(processer_name){
     ## TODO: Load input data by processer name. Mainly called at model. input file name is defined at proc meta file.Return data.frame
     meta_proc <- meta_proc_read(processer_name)

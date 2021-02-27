@@ -14,3 +14,6 @@ meta_mod_add(model_name, processer_name)
 \description{
 Add meta data of model to mod.yaml. If there is meta data of input model, function does nothing.
 }
+\examples{
+meta_mod_add('mod_sample','proc_sample')
+}

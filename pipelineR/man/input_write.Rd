@@ -12,3 +12,6 @@ input_write(x, processer_name)
 \description{
 Controll input data. Save input data by processer name: file type is only csv.
 }
+\examples{
+input_write(df_input,'proc_sample')
+}
