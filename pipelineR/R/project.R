@@ -4,7 +4,7 @@
 #' @import usethis
 #' @param project_name Target project name. 
 #' @export 
-#' @examples
+#' @examples project_create('proj_sample')
 
 project_create <- function(project_name){
     # Create root dir

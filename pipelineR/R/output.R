@@ -6,7 +6,7 @@
 #' @param write_func How to save x. e.g) write.csv()
 #' @param model_name Target model name.
 #' @export 
-#' @examples
+#' @examples output_write(df_output,'mod_sapmple')
 
 output_write <- function(x,model_name){
     ## TODO: Save output data @data/output/. File name is defined by model_name.

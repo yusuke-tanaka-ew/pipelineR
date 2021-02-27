@@ -12,3 +12,6 @@ meta_proc_read(processer_name = NULL)
 \description{
 Read proc meta data. When processer_name is null ,return all proc meta data. With processer name return list of proc meta data,you can use {name,description,input}
 }
+\examples{
+meta_proc_read('proc_sample')
+}

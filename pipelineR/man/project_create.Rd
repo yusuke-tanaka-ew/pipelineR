@@ -12,3 +12,6 @@ project_create(project_name)
 \description{
 Create function (create directory & add files.)
 }
+\examples{
+project_create('proj_sample')
+}

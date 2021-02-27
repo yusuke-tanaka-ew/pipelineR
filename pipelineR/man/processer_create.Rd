@@ -12,3 +12,6 @@ processer_create(processer_name)
 \description{
 Create processer (Add processer script & model info to proc.yaml)
 }
+\examples{
+processer_crate('proc_sample')
+}
