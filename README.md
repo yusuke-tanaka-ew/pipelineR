@@ -53,6 +53,31 @@ This script contains base code.
 pipelineR::model_create('model_name','processer_name')
 ```
 
+* Write input  
+Write input data to data/input.  
+Input data name is 'data/input/input_{processer_name}.csv'  
+  
+```
+pipelineR::input_write('processer_name')
+```
+  
+* Read input  
+Read input data to data/input.  
+
+```
+pipelineR::input_read('processer_name')
+```
+
+* Write output  
+Write output data to data/output.  
+Output data is dataframe -> write csv.  
+Output data is not dataframe -> write txt.  
+
+```
+pipelineR::output_write(output_data,model_name)
+```
+
+
 ## How to install?
 
 * dev ver  
