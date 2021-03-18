@@ -77,6 +77,44 @@ Output data is not dataframe -> write txt.
 pipelineR::output_write(output_data,model_name)
 ```
 
+* View processer list  (WORKING!!)  
+View processer list  
+
+```
+pipelineR::processer_list()
+```
+
+* View processer detail  (WORKING!!)  
+View processer detail   
+
+```
+pipelineR::processer_detail('processer_name')
+```
+
+* Run processer  (WORKING!!)  
+
+```
+pipelineR::processer_run('processer_name')
+```
+* View model list  (WORKING!!)  
+View model list  
+
+```
+pipelineR::model_list()
+```
+
+* View model detail  (WORKING!!)  
+View model detail   
+
+```
+pipelineR::model_detail('model_name')
+```
+
+* Run model  (WORKING!!)  
+
+```
+pipelineR::model_run('model_name')
+```
 
 ## How to install?
 
